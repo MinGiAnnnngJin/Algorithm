@@ -31,18 +31,18 @@ class Solution {
             
             actions.put('#',s->stack.push(stack.pop()*-1));
         
-        int num = 0;
+        int num = 0;  //10D2S#10S
          boolean isNum = false; // 숫자가 유효한 상태인지 플래그
         for(int i=0; i<dartResult.length();i++){
-            char ch = dartResult.charAt(i);
+            char ch = dartResult.charAt(i);  
+
             
             if(Character.isDigit(ch)){
                 if(i>0 && Character.isDigit(dartResult.charAt(i-1))){
-                    num=num*10+(ch -'0');
-                }else{ num=ch-'0';
-                     isNum = true; // 숫자가 시작됨 
+                    num=num*10+(ch -'0'); 
+                } else{ num=ch-'0';  
+                     isNum = true; // 숫자가 시작됨      
                      }
-                
                 }
             
              else {
@@ -55,9 +55,10 @@ class Solution {
                  
             }
                 }
-           if (isNum) {
-            stack.push(num);
-        }
+        //    if (isNum) {
+        //     stack.push(num);
+        //        System.out.println("뭐지");
+        // }
         return stack.stream().mapToInt(Integer::intValue).sum();
         }
        public static void main(String[] args) {
