@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -5,12 +6,15 @@ public class Main {
     static boolean[] visited;
     static StringBuilder sb = new StringBuilder();
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
 
-        int N = sc.nextInt(); // 정점 개수
-        int M = sc.nextInt(); // 간선 수
-        int V = sc.nextInt(); // 시작 정점
+        // 정점 개수, 간선 수, 시작 정점 입력
+        st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int V = Integer.parseInt(st.nextToken());
 
         // 그래프 초기화
         for (int i = 0; i <= N; i++) {
@@ -19,8 +23,9 @@ public class Main {
 
         // 간선 입력
         for (int i = 0; i < M; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
+            st = new StringTokenizer(br.readLine());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
             g.get(a).add(b);
             g.get(b).add(a);
         }
