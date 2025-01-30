@@ -1,2 +1,4 @@
-# AA
-This is an auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# 🏆 Algorithm Study by Gi-ang-Jin 
+
+> **꾸준히 알고리즘 문제를 풀고 정리하는 저장소입니다.**  
+> 🚀 목표: **자료구조 & 알고리즘 개념을 확실히 익히고, 문제 해결 능력을 기르기!**  
